@@ -18,7 +18,7 @@ banner='
 |___/____\___/ \_/\_/ |___/|_|\_|___/'
 
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
-echo -e "${CORTITLE}       SSHPLUS CLIENT SLOWDNS        ${SCOLOR}"
+echo -e "${CORTITLE}           CLIENT SLOWDNS            ${SCOLOR}"
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
 echo -e "${RED}$banner${SCOLOR}"
 [[ ! -e dns ]] && {
@@ -30,7 +30,7 @@ echo -e "${RED}$banner${SCOLOR}"
     [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
     echo -e "\n${GREEN}DOWNLOADING THE SCRIPT PLEASE WAIT ! ${SCOLOR}"
     curl -O https://github.com/arfprsty810/SlowDns/raw/main/file/config/dns > /dev/null 2>&1
-    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}SCRIPT DOWNLOADED ! NEXT STEP \n JUST RUN THE COMMAND ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU ARE OFFLINE !${SCOLOR}"
+    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}SCRIPT DOWNLOADED ! NEXT STEP \nJUST RUN THE COMMAND ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU ARE OFFLINE !${SCOLOR}"
     chmod +x dns
 }
 [[ ! -e $HOME/credenciais ]] && {
@@ -47,7 +47,7 @@ echo -e "${RED}$banner${SCOLOR}"
     echo -e "$ns\n$chave" > $HOME/credenciais
 } || {
     perg=$(echo "${SCOLOR}[s/n]: ")
-    echo -e "\n${YELLOW}SCRIPT IS ALREADY CONFIGURED WITH A \n SEEVIDOR AND IS READY FOR CONNECTION"
+    echo -e "\n${YELLOW}SCRIPT IS ALREADY CONFIGURED WITH A \nSEEVIDOR AND IS READY FOR CONNECTION"
     read -p "$(echo -e "${GREEN}WANT TO CONTINUE WITH THE SAME?${SCOLOR} [s/n]: ")" -e -i s opc
     [[ "$opc" != @(s|sim|S|SIM) ]] && {
         rm $HOME/credenciais dns > /dev/null 2>&1
