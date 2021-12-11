@@ -99,10 +99,8 @@ Opcao10 () {
 
 Opcao11 () {
      clear
-    bash /etc/slowdns/remove-slow
     echo -e "\033[0;31mSlowDNS Manager Uninstalled!\033[0m"
     sleep 2
-    rm /bin/slowdns
 }
 
 Sair() {
