@@ -42,12 +42,12 @@ rm -rf /bin/slowdns && rm /root/remove-slow
 sleep 2
 rm remove-slow && rm -rf /etc/slowdns && rm -rf server.key && rm -rf server.pub
 sleep 2
-rm -rf uninstall
+
 }
 fun_bar 'fun_remove'
-
 echo -e "\033[0;36mSLOWDNS UNINSTALLED! [✔]\033[0m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
+rm -rf uninstall
 
