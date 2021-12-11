@@ -81,11 +81,15 @@ touch infons
 echo $nameserver > infons
 set_ns () {
 sleep 1
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/startdns 
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/restartdns 
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-info
-chmod +x startdns
-chmod +x restartdns
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remover-slow; chmod +x remove-slow
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-info; chmod +x slowdns-info
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-drop; chmod +x slowdns-drop
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-ssh; chmod +x slowdns-ssh
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-ssl; chmod +x slowdns-ssl
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-socks; chmod +x slowdns-socks
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns; chmod +x slowdns; cp slowdns /bin/
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/stopdns; chmod +x stopdns
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/startdns; chmod +x startdns
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
 sed -i "s;1234;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
 cp startdns /bin/
