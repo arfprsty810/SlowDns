@@ -53,6 +53,7 @@ wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-soc
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns; chmod +x slowdns; cp slowdns /bin/
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/stopdns; chmod +x stopdns
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/startdns; chmod +x startdns
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/update; chmod +x update
 }
 fun_bar 'fun_att'
 echo -e "CONFIGURING FIREWALL..."
