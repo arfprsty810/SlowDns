@@ -92,6 +92,7 @@ wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/stopdns; ch
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/startdns; chmod +x startdns
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/update; chmod +x update
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/restartdns; chmod +x restartdns
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/uninstall; chmod +x uninstall
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
 sed -i "s;1234;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
 cp startdns /bin/
