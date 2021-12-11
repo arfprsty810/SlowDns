@@ -88,7 +88,8 @@ Opcao8 () {
 
 Opcao9 () {
      clear
-    wget wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remove-slow
+    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remove-slow
+clear
 chmod +x remove-slow
 bash remove-slow
 }
