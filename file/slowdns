@@ -105,8 +105,6 @@ Opcao11 () {
     wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/uninstall
 chmod +x uninstall
 bash uninstall
-rm -rvf uninstall
-rm /bin/slowdns
     sleep 2
 }
 
