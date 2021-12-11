@@ -35,12 +35,13 @@ fun_bar 'fun_stop'
 echo ""
 echo -e "Deleting Key & NS SlowDNS"
 fun_rm () {
-rm -rvf /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
-rm -rvf /etc/slowdns/server.key
-rm -rvf /etc/slowdns/server.pub
-rm -rvf /etc/slowdns/infons
-rm -rvf server.key
-rm -rvf server.pub
+rm -rf /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
+rm -rf /etc/slowdns/server.key
+rm -rf /etc/slowdns/server.pub
+rm -rf /etc/slowdns/infons
+rm -rf server.key
+rm -rf server.pub
+rm -rf remove-slow
 sleep 1.5
 }
 fun_bar 'fun_rm'
