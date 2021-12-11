@@ -98,6 +98,8 @@ Opcao10 () {
 
 Opcao11 () {
      clear
+rm -rvf /etc/slowdns
+clear
     echo -e "\033[0;31mSlowDNS Manager Uninstalled!\033[0m"
     sleep 2
 }
