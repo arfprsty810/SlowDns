@@ -35,6 +35,6 @@ sleep 2
 }
 fun_bar 'fun_desable'
 echo ""
-echo "  SlowDNS Disabled! [✔]"
+echo "  SlowDns Stopped! [✔]"
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 slowdns
