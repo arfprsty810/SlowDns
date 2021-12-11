@@ -47,7 +47,8 @@ echo -e "   \033[0;36mUPDATING SCRIPT...\033[0m"
 echo ""
 fun_update () {
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/install && chmod +x install && bash install
-rm -rvf install
+rm -rf install
+rm -rf update
 }
 fun_bar 'fun_update'
 sleep 3
@@ -59,4 +60,3 @@ echo -e "  \033[1;33mTO OPEN THE MENU USE: \033[1;37m\033sslowdns\033[1;33m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
-rm -rvf update
