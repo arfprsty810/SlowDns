@@ -145,7 +145,8 @@ slowdns
 }
 Option2 () {
 cd
-rm -rvf server.key server.pub
+rm -rvf server.key
+rm -rvf server.pub
 echo "Generating new key"
 cd /etc/slowdns/
 ./dns-server -gen-key -privkey-file /root/server.key -pubkey-file /root/server.pub
@@ -175,7 +176,8 @@ slowdns
 Option3 () {
 echo -e "Downloading default key pair..."
 cd
-rm -rvf server.key server.pub
+rm -rvf server.key
+rm -rvf server.pub
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.key
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.pub
 sleep 1
