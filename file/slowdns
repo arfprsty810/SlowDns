@@ -88,7 +88,6 @@ Opcao8 () {
 
 Opcao9 () {
      clear
-    bash /etc/slowdns/stopdns
     bash /etc/slowdns/remove-slow
 }
 
