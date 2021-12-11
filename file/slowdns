@@ -93,12 +93,16 @@ Opcao9 () {
 
 Opcao10 () {
     clear
-    bash  /etc/slowdns/update
+    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/update
+chmod +x update
+bash update
 }
 
 Opcao11 () {
      clear
-    bash /etc/slowdns/unintall
+    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/uninstall
+chmod +x uninstall
+bash uninstall
     sleep 2
 }
 
