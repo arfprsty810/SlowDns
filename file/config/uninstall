@@ -37,17 +37,31 @@ echo ""
 echo -e "   \033[0;36mUNINSTALLING ANCIENT FILES...\033[0m"
 echo ""
 
+cd /root
+
+echo -e "Stopping service from DNS"
+fun_stop () {
+screen -ls | grep slowdns | cut -d. -f1 | awk '{print $1}' | xargs kill
+sleep 1.5
+}
+fun_bar 'fun_stop'
+
 fun_remove () {
+rm -rvf /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
+rm -rvf /etc/slowdns/server.key
+rm -rvf /etc/slowdns/server.pub
+rm -rvf /etc/slowdns/infons
+rm -rvf server.key
+rm -rvf server.pub
+sleep 1.5
 rm -rvf /bin/slowdns && rm -rvf /root/remove-slow
 sleep 2
 rm -rvf remove-slow && rm -rvf /etc/slowdns && rm -rvf server.key && rm -rvf server.pub
 sleep 2
-
 }
 fun_bar 'fun_remove'
 echo -e "\033[0;36mSLOWDNS UNINSTALLED! [✔]\033[0m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
-rm -rvf uninstall
 
