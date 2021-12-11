@@ -72,9 +72,7 @@ cd /etc/slowdns
 touch infons
 echo $nameserver > infons
 set_ns () {
-sleep 1
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/startdns 
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/restartdns 
+sleep 1 
 chmod +x startdns
 chmod +x restartdns
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
@@ -142,7 +140,7 @@ slowdns
 }
 Option2 () {
 cd
-rm server.key server.pub
+rm -rvf server.key server.pub
 echo "Generating new key"
 cd /etc/slowdns/
 ./dns-server -gen-key -privkey-file /root/server.key -pubkey-file /root/server.pub
@@ -172,7 +170,7 @@ slowdns
 Option3 () {
 echo -e "Downloading default key pair..."
 cd
-rm server.key server.pub
+rm -rvf server.key server.pub
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.key
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.pub
 sleep 1
