@@ -77,7 +77,7 @@ echo -e "\033[1;31m════════════════════�
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "INSTALLER SLOWDNS MANAGER" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "          \033[1;33mINSTALLATION COMPLETE!\033[0m          "
+echo -e "          \033[1;33mINSTALLATION COMPLETED! [✔]\033[0m          "
 echo ""
 echo -e "SlowDns Command Menu: \033[1;33mslowdns\033[0m"
 cd
