@@ -44,7 +44,7 @@ apt install ncurses-utils -y
 mkdir /etc/slowdns
 cd /etc/slowdns
 wget https://github.com/arfprsty810/SlowDns/raw/main/file/config/dns-server; chmod +x dns-server
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remover-slow; chmod +x remove-slow
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remove-slow; chmod +x remove-slow
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-info; chmod +x slowdns-info
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-drop; chmod +x slowdns-drop
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/slowdns-ssh; chmod +x slowdns-ssh
