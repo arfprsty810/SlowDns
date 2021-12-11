@@ -66,6 +66,8 @@ fun_dnscf () {
 sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved.service && sudo mv /etc/resolv.conf /etc/resolv.conf.bkp && echo "nameserver 1.1.1.1" > /etc/resolv.conf
 sudo systemctl enable systemd-resolved.service && sudo systemctl start systemd-resolved.service
 sleep 2
+cd 
+rm -rf install
 }
 fun_bar 'fun_dnscf'
 clear
@@ -77,4 +79,4 @@ echo -e "          \033[1;33mINSTALLATION COMPLETED! [✔]\033[0m          "
 echo ""
 echo -e "SlowDns Command Menu: \033[1;33mslowdns\033[0m"
 cd
-rm -rvf install
+
