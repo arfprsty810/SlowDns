@@ -37,3 +37,5 @@ fun_bar 'fun_start'
 echo ""
 echo "       SLOWDNS STARTED SUCCESSFULLY!!!"
 sleep 2
+read -p "Press [Enter] to return to the menu or CTRL+C to exit"
+slowdns
