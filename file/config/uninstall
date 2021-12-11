@@ -43,23 +43,31 @@ echo -e "Stopping service from DNS"
 fun_stop () {
 screen -ls | grep slowdns | cut -d. -f1 | awk '{print $1}' | xargs kill
 sleep 1.5
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
+systemctl enable systemd-resolved.service && systemctl start systemd-resolved.service &&
+sleep 1.5
 }
 fun_bar 'fun_stop'
 
+echo ""
+echo -e "UNINSTALLING ..."
 fun_remove () {
-rm -rvf /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
-rm -rvf /etc/slowdns/server.key
-rm -rvf /etc/slowdns/server.pub
-rm -rvf /etc/slowdns/infons
-rm -rvf server.key
-rm -rvf server.pub
+rm -rf /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
+rm -rf /etc/slowdns/server.key
+rm -rf /etc/slowdns/server.pub
+rm -rf /etc/slowdns/infons
+rm -rf server.key
+rm -rf server.pub
+rm -rf uninstall
 sleep 1.5
-rm -rvf /bin/slowdns && rm -rvf /root/remove-slow
+rm /bin/slowdns
 sleep 2
-rm -rvf remove-slow && rm -rvf /etc/slowdns && rm -rvf server.key && rm -rvf server.pub
+rm -rf remove-slow && rm -rvf /etc/slowdns
 sleep 2
 }
 fun_bar 'fun_remove'
+
+echo ""
 echo -e "\033[0;36mSLOWDNS UNINSTALLED! [✔]\033[0m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
