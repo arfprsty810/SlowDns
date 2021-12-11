@@ -11,7 +11,7 @@ echo -e "\033[0;36m#  ''|||. ||.|  '|.||  ||  | ||    ||| '|. |  ''|||.#\033[m"
 echo -e "\033[0;36m#.     '||||||   || ||| |||  ||    |||   |||.     '|#\033[m"
 echo -e "\033[0;36m#|'....|'.||.'|..|'  |   |  .||...|'.|.   '||'....|'#\033[m"
 echo -e "\033[0;36m#---------------------------------------------------#\033[m"
-echo -e "\033[0;36m#\033[m \033[0;31mSlowDNS | Desfrute e passe tempo\033[m \033[0;36m#\033[m"
+echo -e "\033[0;36m#\033[m \033[0;31mSlowDNS MANAGED | v1.0.0 \033[m \033[0;36m#\033[m"
 echo -e "\033[0;36m#===================================================#\033[m"
     echo ""
     echo -e "\033[0;36m[01]\033[m | SlowDns SSH"
@@ -22,7 +22,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     echo -e "\033[0;36m[06]\033[m | Start SlowDNS"
     echo -e "\033[0;36m[07]\033[m | Restart SlowDNS"
     echo -e "\033[0;36m[08]\033[m | Stop SlowDNS"
-    echo -e "\033[0;36m[09]\033[m | Remove Key"
+    echo -e "\033[0;36m[09]\033[m | Remove Key-NS"
     echo -e "\033[0;36m[10]\033[m | Update"
     echo -e "\033[0;36m[11]\033[m | Uninstall"
     echo -e "\033[0;36m[00]\033[m | Exit"
@@ -88,7 +88,7 @@ Opcao8 () {
 
 Opcao9 () {
      clear
-bash /etc/slowdns/remove-slow
+     bash /etc/slowdns/remove-slow
 }
 
 Opcao10 () {
