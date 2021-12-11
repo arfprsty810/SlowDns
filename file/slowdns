@@ -88,10 +88,7 @@ Opcao8 () {
 
 Opcao9 () {
      clear
-    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/remove-slow
-clear
-chmod +x remove-slow
-bash remove-slow
+bash /etc/slowdns/remove-slow
 }
 
 Opcao10 () {
