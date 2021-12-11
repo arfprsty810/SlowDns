@@ -73,10 +73,6 @@ touch infons
 echo $nameserver > infons
 set_ns () {
 sleep 1
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.key
-wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/server.pub
-chmod +x startdns
-chmod +x restartdns
 sed -i "s;1234;$nameserver;g" /etc/slowdns/startdns > /dev/null 2>&1
 sed -i "s;1234;$nameserver;g" /etc/slowdns/restartdns > /dev/null 2>&1
 cp startdns /bin/
