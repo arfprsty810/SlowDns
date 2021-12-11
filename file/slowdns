@@ -94,9 +94,7 @@ Opcao9 () {
 
 Opcao10 () {
     clear
-    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/update
-    chmod +x update
-    bash update
+    bash  /etc/slowdns/update
 }
 
 Opcao11 () {
