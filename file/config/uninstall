@@ -38,9 +38,9 @@ echo -e "   \033[0;36mUNINSTALLING ANCIENT FILES...\033[0m"
 echo ""
 
 fun_remove () {
-rm -rf /bin/slowdns && rm /root/remove-slow
+rm -rvf /bin/slowdns && rm -rvf /root/remove-slow
 sleep 2
-rm remove-slow && rm -rf /etc/slowdns && rm -rf server.key && rm -rf server.pub
+rm -rvf remove-slow && rm -rvf /etc/slowdns && rm -rvf server.key && rm -rvf server.pub
 sleep 2
 
 }
@@ -49,5 +49,5 @@ echo -e "\033[0;36mSLOWDNS UNINSTALLED! [✔]\033[0m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
-rm -rf uninstall
+rm -rvf uninstall
 
