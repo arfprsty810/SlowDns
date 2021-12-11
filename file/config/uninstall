@@ -46,7 +46,7 @@ rm -rf uninstall
 }
 fun_bar 'fun_remove'
 
-echo -e "  \033[1;33mUNINSTALL SUCCSESSFULLY !!!\033[1;33m"
+echo -e "\033[0;36mSLOWDNS UNINSTALLED! [✔]\033[0m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
