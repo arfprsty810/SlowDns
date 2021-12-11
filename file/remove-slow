@@ -52,7 +52,7 @@ sleep 1.5
 }
 fun_bar 'fun_revdns'
 echo ""
-echo -e "SlowDNS Remove Successfully!"
+echo "  SlowDns Removing Successfully! [✔]"
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 slowdns
 
