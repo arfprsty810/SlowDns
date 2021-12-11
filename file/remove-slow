@@ -36,6 +36,11 @@ echo ""
 echo -e "Deleting Key & NS SlowDNS"
 fun_rm () {
 rm /etc/rc.local; mv /etc/rc.local.bkp /etc/rc.local
+rm -rf /etc/slowdns/server.key
+rm -rf /etc/slowdns/server.pub
+rm -rf /etc/slowdns/infons
+rm -rf server.key
+rm -rf server.pub
 sleep 1.5
 }
 fun_bar 'fun_rm'
@@ -48,7 +53,5 @@ sleep 1.5
 fun_bar 'fun_revdns'
 echo ""
 echo -e "SlowDNS Remove Successfully!"
-rm -rf /etc/slowdns/server.key
-rm -rf /etc/slowdns/server.pub
 slowdns
 
