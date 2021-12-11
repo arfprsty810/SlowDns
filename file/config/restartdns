@@ -39,3 +39,5 @@ fun_bar 'fun_start'
 sleep 2
 echo ""
 echo "  SlowDNS Successfully Restarted! [✔]"
+read -p "Press [Enter] to return to the menu or CTRL+C to exit"
+slowdns
