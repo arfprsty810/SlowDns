@@ -102,6 +102,8 @@ Opcao11 () {
     bash /etc/slowdns/remove-slow
     echo -e "\033[0;31mSlowDNS Manager Uninstalled!\033[0m"
     sleep 2
+    rm -rf server.key
+    rm -rf server.pub
     rm /bin/slowdns
 }
 
