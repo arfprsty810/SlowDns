@@ -46,7 +46,8 @@ echo ""
 echo -e "   \033[0;36mUPDATING SCRIPT...\033[0m"
 echo ""
 fun_update () {
-rm -rf install && wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/install && chmod +x install && bash install
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/install && chmod +x install && bash install
+rm -rf install
 }
 fun_bar 'fun_update'
 sleep 3
