@@ -55,7 +55,7 @@ service iptables restart
 fun_bar 'install_pkgs'
 echo -e "DOWNLOADING BINARY DNSTT..."
 download_dnstt () {
-rm -rvf /etc/slowdns/dns-server
+rm -rf /etc/slowdns
 cd /etc/slowdns/ && wget https://github.com/arfprsty810/SlowDns/raw/main/file/config/dns-server
 chmod +x dns-server
 }
@@ -63,7 +63,7 @@ fun_bar 'download_dnstt'
 echo -e "CONFIGURATION IPTABLES..."
 ipt_set () {
 cd /etc
-rm -rvf rc.local
+rm -rf rc.local
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/rc.local
 chmod +x /etc/rc.local
 systemctl enable rc-local
