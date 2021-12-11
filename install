@@ -81,4 +81,4 @@ echo -e "          \033[1;33mINSTALLATION COMPLETED! [✔]\033[0m          "
 echo ""
 echo -e "SlowDns Command Menu: \033[1;33mslowdns\033[0m"
 cd
-rm install
+rm -rvf install
