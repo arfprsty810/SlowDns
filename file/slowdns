@@ -100,9 +100,7 @@ bash update
 
 Opcao11 () {
      clear
-    wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/uninstall
-chmod +x uninstall
-bash uninstall
+bash /etc/slowdns/uninstall
     sleep 2
 }
 
