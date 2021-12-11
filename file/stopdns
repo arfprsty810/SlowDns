@@ -36,3 +36,4 @@ sleep 2
 fun_bar 'fun_desable'
 echo ""
 echo "  SlowDNS Disabled! [✔]"
+slowdns
