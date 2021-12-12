@@ -69,10 +69,15 @@ fun_bar 'download_dnstt'
 echo -e "CONFIGURATION IPTABLES..."
 
 ipt_set () {
+cd /etc/systemd/system
+rm -rf rc-local.service
+wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/rc-local.service
+
 cd /etc
-mv rc.local rc.local.bkp
+rm -rf rc.local
 wget https://raw.githubusercontent.com/arfprsty810/SlowDns/main/file/config/rc.local
 chmod +x /etc/rc.local
+
 systemctl enable rc-local
 systemctl start rc-local
 }
