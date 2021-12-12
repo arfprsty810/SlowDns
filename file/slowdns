@@ -43,6 +43,15 @@ echo -e "\033[0;36m#===================================================#\033[m"
     0) Sair ;;
     *) "Calm Butterfly" ; echo ; slowdns ;;
     esac
+
+echo ""
+echo "       YOUR SELECTED NUMBER NOT FOUND! [X]"
+sleep 2
+read -p "Press [Enter] to return to the menu or CTRL+C to exit"
+exit
+clear
+slowdns
+
     }
 
 Opcao1 () {
@@ -109,10 +118,3 @@ Sair() {
     exit
 }
 clear
-echo ""
-echo "       YOUR SELECTED NUMBER NOT FOUND! [X]"
-sleep 2
-read -p "Press [Enter] to return to the menu or CTRL+C to exit"
-exit
-clear
-slowdns
