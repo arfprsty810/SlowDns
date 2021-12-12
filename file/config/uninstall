@@ -76,4 +76,5 @@ read -p "Press [ ENTER ] to release the terminal"
 echo -e "\033[0m"
 clear
 exit
+cd
 
