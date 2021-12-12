@@ -41,20 +41,9 @@ echo -e "\033[0;36m#===================================================#\033[m"
     10) Opcao10 ;;
     11) Opcao11 ;;
     0) Sair ;;
-#) kosong ;;
     *) "Calm Butterfly" ; echo ; slowdns ;;
     esac
     }
-
-#kosong () {
-#echo ""
-#echo "       YOUR SELECTED NUMBER NOT FOUND! [X]"
-#sleep 2
-#read -p "Press [Enter] to return to the menu or CTRL+C to exit"
-#exit
-#clear
-#slowdns
-#}
 
 Opcao1 () {
     clear
