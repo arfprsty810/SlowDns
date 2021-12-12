@@ -59,6 +59,8 @@ echo ""
 echo -e "\033[0;36mSLOWDNS SUCCESSFULLY UPDATED! [✔]\033[0m"
 echo ""
 sleep 3
+echo "SlowDns Manager was Updated to Lasted version"
+echo ""
 echo -e "  \033[1;33mTO OPEN THE MENU USE: \033[1;37m\033sslowdns\033[1;33m"
 echo ""
 read -p "Press [ ENTER ] to release the terminal"
