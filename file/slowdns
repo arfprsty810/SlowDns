@@ -42,11 +42,10 @@ echo -e "\033[0;36m#===================================================#\033[m"
     11) Opcao11 ;;
     0) Sair ;;
  #   *) "Calm Butterfly" ; echo ; slowdns ;;
-*) SlowDns ;;
     esac
     }
 
-*) SlowDns () {
+() {
 clear
 slowdns
 }
