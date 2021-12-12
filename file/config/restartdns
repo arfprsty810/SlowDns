@@ -41,5 +41,4 @@ echo ""
 echo "  SlowDns Successfully Restarted! [✔]"
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
