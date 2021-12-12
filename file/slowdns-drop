@@ -154,7 +154,6 @@ echo -e "\033[1;33mKeep it in a safe place, you may need it in the future!\033[0
 echo ""
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
 }
 
@@ -189,7 +188,6 @@ echo -e "\033[1;33mKeep it in a safe place, you may need it in the future!\033[0
 echo ""
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
 }
 
@@ -226,7 +224,6 @@ echo -e "\033[1;33mKeep it in a safe place, you may need it in the future!\033[0
 echo ""
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
 }
 
@@ -285,7 +282,6 @@ echo -e "\033[1;33mKeep it in a safe place, you may need it in the future!\033[0
 echo ""
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
 }
 
@@ -320,7 +316,6 @@ echo -e "\033[1;33mKeep it in a safe place, you may need it in the future!\033[0
 echo ""
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
 clear
-exit
 slowdns
 }
 
@@ -328,7 +323,6 @@ opc_keyx () {
 echo -ne "Aborting installation"
 sleep 2
 clear
-exit
 slowdns
 }
 
