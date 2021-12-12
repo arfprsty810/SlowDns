@@ -55,5 +55,6 @@ fun_bar 'fun_revdns'
 echo ""
 echo "  SlowDns Removing Successfully! [✔]"
 read -p "Press [Enter] to return to the menu or CTRL+C to exit"
+clear
 slowdns
 
