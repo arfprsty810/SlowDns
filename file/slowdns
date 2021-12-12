@@ -108,4 +108,3 @@ Sair() {
     clear
     exit
 }
-clear
