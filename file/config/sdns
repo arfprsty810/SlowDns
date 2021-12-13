@@ -19,12 +19,12 @@ echo -e "${RED}$banner${SCOLOR}"
     yes| termux-setup-storage > /dev/null 2>&1
     unset LD_PRELOAD > /dev/null 2>&1
     cd $HOME
-    mv slowdns $PREFIX/bin/slowdns
-    chmod +x $PREFIX/bin/slowdns
-    [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
+    mv sdns $PREFIX/bin/sdns
+    chmod +x $PREFIX/bin/sdns
+    [[ $(grep -c 'sdns' $PREFIX/etc/profile) == '0' ]] && echo 'sdns' >> $PREFIX/etc/profile
     echo -e "\n${GREEN}DOWNLOADING SCRIPT PLEASE WAIT! ${SCOLOR}"
     curl -O https://github.com/arfprsty810/SlowDns/raw/main/dns > /dev/null 2>&1
-    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}Downloaded script! THE NEXT TIME\nExclude type only the command ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU'RE OFFLINE !${SCOLOR}"
+    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}Downloaded script! THE NEXT TIME\nExclude type only the command ${RED}(${GREEN}sdns${RED})\n${YELLOW}EVEN IF YOU'RE OFFLINE !${SCOLOR}"
     chmod +x dns
 }
 [[ ! -e $HOME/credenciais ]] && {
@@ -45,10 +45,10 @@ echo -e "${RED}$banner${SCOLOR}"
     read -p "$(echo -e "${GREEN}WANT TO CONTINUE, if yes=s remove=n ?${SCOLOR} [s/n]: ")" -e -i s opc
     [[ "$opc" != @(s|sim|S|SIM) ]] && {
         rm $HOME/credenciais dns > /dev/null 2>&1
-        rm $PREFIX/bin/slowdns > /dev/null 2>&1
-        sed -i '/slowdns/d' $PREFIX/etc/profile > /dev/null 2>&1
+        rm $PREFIX/bin/sdns > /dev/null 2>&1
+        sed -i '/sdns/d' $PREFIX/etc/profile > /dev/null 2>&1
         echo -e "\n${RED}SCRIPT REMOVED !${SCOLOR}"
-        rm slowdns > /dev/null 2>&1
+        rm sdns > /dev/null 2>&1
         exit 0
     } || {
         unset LD_PRELOAD > /dev/null 2>&1
