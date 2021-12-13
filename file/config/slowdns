@@ -1,10 +1,4 @@
-#!/bin/bash
 clear
-#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
-# CRIADOR POR @CRAZY_VPN
-# VERSAO 1.0
-# SLOW DNS TUNNEL
-#â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
@@ -18,7 +12,7 @@ banner='
 |___/____\___/ \_/\_/ |___/|_|\_|___/'
 
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
-echo -e "${CORTITLE}           CLIENT SLOWDNS            ${SCOLOR}"
+echo -e "${CORTITLE}       openvpn ssh CLIENTE SLOWDNS   ${SCOLOR}"
 echo -e "${CORTITLE}=====================================${SCOLOR}" 
 echo -e "${RED}$banner${SCOLOR}"
 [[ ! -e dns ]] && {
@@ -28,27 +22,27 @@ echo -e "${RED}$banner${SCOLOR}"
     mv slowdns $PREFIX/bin/slowdns
     chmod +x $PREFIX/bin/slowdns
     [[ $(grep -c 'slowdns' $PREFIX/etc/profile) == '0' ]] && echo 'slowdns' >> $PREFIX/etc/profile
-    echo -e "\n${GREEN}DOWNLOADING THE SCRIPT PLEASE WAIT ! ${SCOLOR}"
-    curl -O https://github.com/arfprsty810/SlowDns/raw/main/file/config/dns > /dev/null 2>&1
-    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}SCRIPT DOWNLOADED ! NEXT STEP \nJUST RUN THE COMMAND ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU ARE OFFLINE !${SCOLOR}"
+    echo -e "\n${GREEN}DOWNLOADING SCRIPT PLEASE WAIT! ${SCOLOR}"
+    curl -O https://github.com/arfprsty810/SlowDns/raw/main/dns > /dev/null 2>&1
+    echo -e "\n${RED}[${YELLOW}!${RED}] ${YELLOW}Downloaded script! THE NEXT TIME\nExclude type only the command ${RED}(${GREEN}slowdns${RED})\n${YELLOW}EVEN IF YOU'RE OFFLINE !${SCOLOR}"
     chmod +x dns
 }
 [[ ! -e $HOME/credenciais ]] && {
     ns=$1
     [[ -z "$ns" ]] && {
-        echo -e "\n${RED}INCOMPLETE COMMAND${SCOLOR}"
+        echo -e "\n${RED}COMANDO IMCOMPLETO${SCOLOR}"
         exit 0
     }
     chave=$2
     [[ -z "$chave" ]] && {
-        echo -e "\n${RED}INCOMPLETE COMMAND${SCOLOR}"
+        echo -e "\n${RED}COMANDO IMCOMPLETO${SCOLOR}"
         exit 0
     }
     echo -e "$ns\n$chave" > $HOME/credenciais
 } || {
     perg=$(echo "${SCOLOR}[s/n]: ")
-    echo -e "\n${YELLOW}SCRIPT IS ALREADY CONFIGURED WITH A \nSEEVIDOR AND IS READY FOR CONNECTION"
-    read -p "$(echo -e "${GREEN}WANT TO CONTINUE WITH THE SAME?${SCOLOR} [s/n]: ")" -e -i s opc
+    echo -e "\n${YELLOW}O Script is already configured with a\nServer and is ready"
+    read -p "$(echo -e "${GREEN}WANT TO CONTINUE, if yes=s remove=n ?${SCOLOR} [s/n]: ")" -e -i s opc
     [[ "$opc" != @(s|sim|S|SIM) ]] && {
         rm $HOME/credenciais dns > /dev/null 2>&1
         rm $PREFIX/bin/slowdns > /dev/null 2>&1
@@ -62,12 +56,10 @@ echo -e "${RED}$banner${SCOLOR}"
         chave=$(sed -n 2p $HOME/credenciais)
     }
 }
-dns=$3
-[[ -z "$dns" ]] && {
-    dns='187.50.250.115'
-}
-echo -ne "\n${RED}[${YELLOW}!${RED}] ${YELLOW}TO CONTINUE MAKE SURE YOU'RE ONLY WITH THE ${RED}(${YELLOW}MOBILE DATA${RED})\n${YELLOW}PRESS ${GREEN}[ENTER] ${YELLOW}TO CONTINUE.. ${SCOLOR}"; read
-$HOME/dns -udp ${dns}:53 -pubkey ${chave} ${ns} 127.0.0.1:2222 > /dev/null 2>&1 &
-echo -e "\n${RED}[${GREEN}==>${RED}]${SCOLOR} - ${GREEN}SLOWDNS STARTED!${SCOLOR} - ${RED}[${GREEN}<==${RED}]\n\n${RED}[${YELLOW}!${RED}] ${YELLOW}NOW, LOG-IN TO AN APP VPN\nOR PRESS ${GREEN}[ENTER] ${RED}TO DISCONNECT ${SCOLOR}"; read
+echo -ne "\n${RED}[${YELLOW}!${RED}] ${YELLOW}To continue make sure\nIt is only with the ${RED}(${YELLOW}Mobile data${RED})\n${YELLOW}ACTIVATED ${GREEN}ENTER ${YELLOW}TO CONTINUE.. ${SCOLOR}"; read
+read -p "$(echo -e "${GREEN}NETWORK DNS SERVER! ${SCOLOR} [8.8.8.8]: ")" -e -i 8.8.8.8 ra
+
+$HOME/dns -udp $ra:53 -pubkey ${chave} ${ns} 127.0.0.1:2222 > /dev/null 2>&1 &
+echo -e "\n${RED}[${GREEN}âˆš${RED}]${SCOLOR} - ${GREEN}âœ…SLOWDNS CONNECTEDâœ…${SCOLOR} - ${RED}[${GREEN}âˆš${RED}]\n\n${RED}[${YELLOW}!${RED}] ${YELLOW}Now connect to a VPN app\nOr click on ${GREEN}ENTER ${RED}TO DISCONNECT ${SCOLOR}"; read
 piddns=$(ps x| grep -w 'dns' | grep -v 'grep'| awk -F' ' {'print $1'})
 [[ ${piddns} != '' ]] && kill ${piddns} > /dev/null 2>&1
