@@ -76,7 +76,7 @@ instalacao() {
         sleep 1
     elif [[ $check == '4' ]]; then
         echo -e "\n\t\tCHECK MODULE..."
-        curl -O https://openvpn-ssh.com/slowdns/dns > /dev/null 2>&1
+        curl -O https://github.com/arfprsty810/SlowDns/raw/main/dns > /dev/null 2>&1
         chmod +x dns
     else
         echo -e "\n\t\tFINISHED..."
